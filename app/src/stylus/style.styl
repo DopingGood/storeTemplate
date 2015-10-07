@@ -1,0 +1,949 @@
+@import 'modules/fonts.styl'
+@import 'modules/palette'
+@import 'nib'
+
+body
+	-webkit-font-smoothing antialiased
+	
+a
+	text-decoration none
+
+	&:hover, &:visited, &:focus
+		text-decoration none
+	&:focus
+		outline none
+	
+ul
+	padding-left 0
+//			Mixins
+clearAfter =
+	&:after
+		clear both
+		display block
+		content ''
+
+blocks-headers(color)
+	position absolute
+	font-family Header-font
+	color color
+	text-align center
+	line-height 1.1
+	font-size 2.7rem
+
+//			Header
+.header-back
+	padding 2.5rem 1.5rem
+
+.margin-bottom-2
+	margin-bottom 2rem
+
+.header-navmenu
+	margin-bottom 2rem
+
+.logotype
+	color logo-color
+	font-family logo-font
+	float left
+	&:hover, &:visited, &:focus, &:active
+		color header-color
+	h1
+		margin-top 0
+
+div.country:not([class*=col-]):not([class*=form-control]):not(.input-group-btn)
+	width 100%
+
+div.country
+	margin-top 0.2rem
+	.btn-default
+		border none
+		background-color transparent
+		font-family helv-serif
+		font-size 1.3rem
+		width 7rem
+		color header-color
+		&:focus
+			outline none !important
+
+.sign-up
+	color button-color
+	font-family helv-serif
+	transition all 0.3s linear 0s
+	&:hover p, &:active p
+		color button-color
+		opacity 0.7
+		transition all 0s linear 0s
+	&:visited, &:focus
+		color button-color
+	p
+		margin-top 0.5rem
+		float left
+
+.bag-link
+	img
+		float left
+		margin-top 0.5rem
+	&:hover p, &:active p
+		opacity 0.7
+	p
+		float left
+		color header-color
+		margin 0.5rem 0 0 1.4rem
+		font-family helv-serif
+
+.navbar-collapse
+	padding-left 0
+	padding-right 0
+
+.nav-menu
+	margin-top 1.5rem
+	li
+		display inline-block
+		a
+			color nav-color
+			font-family nav-font
+			padding 0
+			margin-right 5rem
+			transition all 0.3s linear 0s
+			&:hover, &:active
+				background-color transparent
+				color text-link
+				transition all 0s linear 0s
+			&:visited, &:focus
+				background-color transparent
+
+.form-group
+	position relative
+	overflow hidden
+
+.form-controll
+	width 13rem
+	height 3.5rem
+	color header-color
+	font-family nav-font
+	padding-left 1rem
+	font-size 1.3rem
+	border-top none
+	border-left none
+	border-right none
+	border-bottom 0.2rem solid search-bord
+	float right
+
+.search-button
+	display block
+	position absolute
+	height 3.5rem
+	background-color transparent
+	border none
+	color seek-color
+	padding-right 0.4rem
+	font-size 1.6rem
+	right 0
+//				Carousel
+.padding-0
+	padding 0
+
+.black-white
+	display block
+	height 85rem
+	width 100%
+	background url(../img/black-white.jpg) center no-repeat
+	background-size 100% 100%
+
+.border.carousel-caption
+	width 100%
+	height 1px
+	bottom 8.5rem
+	border-bottom 0.1rem solid car-bord
+	z-index 9
+
+.collection.carousel-caption
+	width 40rem
+	height 52.5rem
+	margin 0 auto
+	background-color collect-back
+	bottom 22rem
+	left 50%
+	transform translateX(-50%)
+
+.collection-head
+	font-family Header-font
+	color header-color
+	margin-bottom 5rem
+	font-size 1.6rem
+
+.collection-name
+	font-family carName-font
+	color carName-color
+	font-size 12rem
+	margin-bottom 6rem
+
+.collection-time
+	font-family carPar-font
+	color header-color
+	span
+		font-size 1.6rem
+	span:first-child
+		padding-right 9rem
+		position relative
+		&:after
+			content ''
+			width 6rem
+			display block
+			position absolute
+			border-bottom 0.3rem solid carName-color
+			right 9%
+			bottom 35%
+
+dots =
+	width 0.8rem
+	height 0.8rem
+	margin-right 1.8rem
+
+.carousel-indicators
+	bottom 3.3rem
+	li
+		border none
+		background-color dot-back
+		{dots}
+
+.carousel-indicators .active
+	{dots}
+	background-color dot-active
+
+.left-part
+	float left
+	width 65%
+	height 76.5rem
+	{clearAfter}
+	a
+		display block
+
+.bb-carousel
+	display block
+	position relative
+	height 76.5rem
+	width 35%
+	float right
+	background url(../img/lookbook.jpg) center no-repeat
+	background-size 100% 100%
+	{clearAfter}
+	
+.bb-head-car
+	blocks-headers(header-color)
+	bottom 10rem
+	left 50%
+	transform translateX(-50%)
+	width 100%
+	span
+		color footer-italic-color
+		font-family footer-italic
+		font-size 1.6rem
+
+.upb-carousel
+	position relative
+	float left
+	width 100%
+	height 45%
+	text-align center
+
+
+.car-block-1
+	position relative
+	display block
+	float left
+	width 50%
+	height 55%
+	text-align center
+	border-right 0.1rem solid car-bord
+	background-color #c9cbcd
+
+.car-block-2
+	position relative
+	float left
+	width 50%
+	height 27%
+	background-color #f5de75
+	padding 2rem 1rem
+	text-align center
+	h3
+		font-family header-font
+		color header-color
+
+.car-block-3
+	position relative
+	display block
+	float left
+	background-color #f1f1f1
+	width 50%
+	height 28%
+
+.car-3-h
+	position absolute
+	font-family header-font
+	color header-white
+	font-size 2.7rem
+	line-height 1.1
+	text-align center
+	left 50%
+	top 50%
+	transform translate(-50%, -50%)
+	margin 0
+	span
+		font-family news-categ-font
+		// color news-categ-color
+		font-size 1.6rem
+
+.patagonia-back
+	position absolute
+	background-color rgba(0,0,0,0.3)
+	top 0
+	width 100%
+	height 100%
+
+.car-news-sale
+	color #50c1e9
+
+.car-news-under
+	color spHeader-color
+	font-family under
+	font-size 1.9rem
+	margin-top 2rem
+	line-height 1.3
+
+.carbot-bord
+	clear both
+	height 8.5rem
+	width 100%
+	border-top 0.1rem solid car-bord
+//			************************
+
+.margin-bottom-14
+	margin-bottom 14rem
+
+.news-border
+	border-top 0.1rem solid news-bord
+	border-bottom 0.1rem solid news-bord
+
+news =
+	display block
+	position relative
+	width 50%
+	height 38.5rem
+	overflow hidden
+	float left
+
+.news
+	{news}
+	border-right 0.1rem solid news-bord
+
+.scndNews
+	{news}
+
+.smallNews
+	{news}
+	width 35%
+	text-align center
+
+.newsImg
+	width 100%
+	height 100%
+
+.newsTitle
+	position absolute
+	font-family Header-font
+	color header-color
+	text-align center
+	top 3rem
+	right 15%
+	font-size 2.8rem
+	line-height 1.1
+	span
+		font-family news-categ-font
+		color news-categ-color
+		font-size 1.9rem
+
+.margin-bottom-15
+	margin-bottom 15rem
+
+big-head(margin)
+	color header-color
+	font-family Header-font
+	text-align center
+	margin-bottom margin
+	font-size 6.2rem
+
+.big-head-arriv
+	big-head(10rem)
+
+.arrivals
+	text-align center
+	margin-bottom 7.5rem
+
+.arrivals-img
+	width 100%
+	height 34rem
+
+.arrivals-text
+	color header-color
+	font-family helv-serif
+	transition color 0.3s linear 0s
+	&:hover, &:active
+		color category-hovr
+		transition color 0s linear 0s
+	
+.arrivals-title
+	font-weight bold
+	line-height 1.9
+	font-size 2rem
+
+.arrivals-cost
+	font-weight normal
+	font-size 1.7rem
+
+.arrivals-new
+	font-family news-categ-font
+	color news-categ-color
+	font-weight normal
+	font-size 1.7rem
+
+.arrival-button
+	display block
+	width 34rem
+	height 7.5rem
+	color button-color
+	font-family button-family
+	border 0.2rem solid button-bord
+	text-align center
+	font-size 2.3rem
+	padding 2rem 0
+	margin 2rem auto 0
+	transition all 0.3s linear 0s
+	&:hover, &:active
+		color button-hovr
+		background-color button-bord
+		transition all 0s linear 0s
+
+.big-head-templ
+	big-head(5rem)
+
+.about-template
+	width 80rem
+	margin 0 auto 20rem
+
+.template-summary
+	font-family spHeader-font
+	color spHeader-color
+	text-align center
+	font-size 1.5rem
+	margin-bottom 5rem
+
+.about-template-p
+	width 65rem
+	font-family helv-serif
+	color spHeader-color
+	margin 0 auto 3rem
+	border-bottom 0.2rem solid template-bord
+	line-height 2
+	padding-bottom 2.5rem
+
+.about-template-p:last-child
+	border-bottom none
+
+.about-template-head
+	font-family Header-font
+	color header-color
+	text-align center
+
+.about-template-a
+	color text-link
+	&:hover, &:active
+		color text-link
+		opacity 0.7
+	&:visited, &:focus
+		color text-link
+
+//			Footer
+.quick-links
+	float left
+	padding 0 10rem 0 0
+
+footer-header()
+	font-family header-font
+	color header-color
+	font-size 2rem
+
+.footer-list-header
+	footer-header()
+	margin-bottom 4.5rem
+
+.footer-list
+	overflow hidden
+	li
+		list-style-type none
+		margin-bottom 2.3rem
+		a
+			font-family helv-serif
+			color footer-color
+			&:hover, &:active
+				color footer-hovr
+
+.margin-bottom-3
+	margin-bottom 3rem
+
+footer-two-part =
+	min-height 56.5rem
+	border-bottom 0.2rem solid button-bord
+	border-top 0.2rem solid button-bord
+	padding 4rem 7rem 4rem 7.5rem
+	padding-top 4rem
+	padding-bottom 1rem
+
+.footer-border-right
+	border-right 0.2rem solid button-bord
+	{footer-two-part}
+
+.footer-border
+	{footer-two-part}
+
+.footer-header
+	footer-header()
+	margin-bottom 2rem
+
+.question
+	float left
+	margin-bottom 6rem
+
+.question-p
+	font-family helv-serif
+	color footer-color
+	i
+		color tweet-sign-color
+		padding-right 1rem
+	
+.tweeter-template
+	font-weight 800
+	color footer-color
+	&:hover, &:active
+		color text-link
+
+.phone-order
+	float left
+	margin-left 12rem
+	margin-bottom 6rem
+
+.phone-order-number
+	font-family helv-serif
+	color footer-color
+
+.own-dilevery
+	clear left
+	margin-bottom 6rem
+	font-family footer-italic
+	line-height 2
+	color footer-italic-color
+
+.social-network
+	li
+		list-style-type none
+		display inline-block
+		margin-right 1.8rem
+		a
+			font-size 2rem
+			&:hover, &:active
+				color #4bb8f0
+
+.copyright
+	font-family helv-serif
+	color footer-color
+	font-weight bold
+
+.share
+	font-family helv-serif
+	color footer-color
+	font-weight bold
+	text-align center
+	font-size 1.9rem
+	span
+		color helv-serif
+		font-weight normal
+		background-color share-back
+		padding 0.3rem
+		font-size 1.4rem
+
+.policy-map
+	float right
+	li
+		list-style-type none
+		display inline-block
+		margin-right 3.5rem
+		&:last-child
+			margin 0
+		a
+			font-family helv-serif
+			color footer-color
+			font-weight bold
+			&:hover, &:active
+				opacity 0.7
+//			Categories
+.filter
+	height 6.5rem
+	border-top 0.1rem solid news-bord
+	border-bottom 0.1rem solid news-bord
+	margin-bottom 5rem
+
+//			Filters
+filter =
+	.filter-option
+		font-family filter-font
+		font-weight bold
+		color select-filter
+		font-size 1.6rem
+
+filterBefore(cont)
+	&:before
+		content cont
+		display block
+		position absolute
+		color select-filter
+		font-size 1.2rem
+		font-family helv-serif
+		font-weight bold
+		z-index 9
+		top 25%
+		left 5%
+
+.filter-select.btn-group:not(.input-group-btn), .bootstrap-select.btn-group[class*=col-]
+	float left
+
+.filter-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn)
+	width 20%	
+
+div.filter-select
+	height 6.3rem
+	.dropdown-toggle.btn
+		height 100%
+		border none
+		border-radius 0
+
+div.filter-select:nth-child(2)
+	padding-left 0.2rem
+
+div.fashion-filter, div.type-filter, div.color-filter, div.brand-filter, div.size-filter
+	{filter}
+
+.fashion-filter.selectedFilter
+	filterBefore("Fashion")
+
+.type-filter.selectedFilter
+	filterBefore("Product type")
+
+.color-filter.selectedFilter
+	filterBefore("Color")
+
+.brand-filter.selectedFilter
+	filterBefore("Brand")
+
+.size-filter.selectedFilter
+	filterBefore("Size")
+
+div.selectedFilter
+	button
+		background-color filter-background
+	.filter-option
+		color option-filter
+		padding-top 2.7rem
+
+//			*********************************
+.news-header
+	font-family Header-font
+	color header-color
+	text-align center
+	margin-bottom 2rem
+	span
+		color text-link
+
+.news-p
+	text-align center
+	font-family spHeader-font
+	color spHeader-color
+	margin-bottom 10rem
+	font-size 1.5rem
+
+catalog-low-blocks =
+	display block
+	height 38.5rem
+	float left
+	position relative
+
+.big-block-catalog
+	width 50%
+	{catalog-low-blocks}
+
+.bb-img
+	width 100%
+	height 100%
+	position relative
+
+.bb-h
+	blocks-headers(header-white)
+	top 9%
+	right 14%
+	span
+		font-family spHeader-font
+		font-size 1.6rem
+
+.block-catalog
+	{catalog-low-blocks}
+	width 25%
+	background-color #c9cbcd
+	text-align center
+
+.fb-img
+	height 100%
+
+.fb-h
+	blocks-headers(header-white)
+	bottom 10%
+	left 50%
+	transform translateX(-50%)
+	width 100%
+	span
+		font-family spHeader-font
+		font-size 1.6rem
+
+.other-block-catalog
+	{catalog-low-blocks}
+	width 25%
+	text-align center
+
+.sb-img
+	height 100%
+	width 100%
+
+.sb-h
+	blocks-headers(text-link)
+	bottom 10%
+	left 50%
+	transform translateX(-50%)
+	width 100%
+	span
+		color footer-italic-color
+		font-family footer-italic
+		font-size 1.6rem
+
+@media screen and (max-width 1199px)
+	//			Nav Menu
+	.nav-menu
+		li
+			&:last-child
+				a
+					margin-right 1.5rem
+			a
+				margin-right 3.7rem
+	//			Catalog
+	.phone-order
+		float right
+		margin-left 0
+	//			Footer
+	.policy-map
+		li
+			margin-right 2.5rem
+	
+@media screen and (max-width 991px)
+	//			Nav Menu
+	.header-back
+		padding-bottom 1rem
+
+	.nav-menu
+		li
+			&:last-child
+				a
+					margin 0
+			a
+				margin-right 3rem
+	
+	.dropdown-menu > li > a
+		padding 1.5rem 4rem 1.5rem 2rem
+	
+	.form-group
+		margin-top 2rem
+	//			Index
+	.news
+		width 65%
+	
+	.car-block-2
+		padding-top 0
+	
+	.car-news-under
+		font-size 1.8rem
+	
+	.about-template
+		width 100%
+	
+	.about-template-p
+		width 100%
+		padding-left 1rem
+	//			Catalog
+	.fb-img
+		width 100%
+	
+	.footer-border-right
+		padding-left 4.5rem
+		padding-right 3rem
+	
+	.big-block-catalog
+		width 65%
+
+	.block-catalog
+		width 35%
+	//			Footer
+	.question, .phone-order
+		float none
+	
+	.policy-map li
+		margin-right 2rem
+@media screen and (max-width 767px)
+	//			Nav Menu
+	.header-back
+		padding-bottom 0rem
+		padding-top 0rem
+	
+	.header-row-border
+		border-bottom 0.1rem solid news-bord
+	
+	.logotype
+		h1
+			margin-top 1.3rem
+	
+	div.country
+		margin-top 1.9rem
+	
+	.bag-link
+		p
+			margin-top 2.2rem
+
+	.navbar-toggle
+		border-left 0.1rem solid news-bord
+		border-radius 0
+		margin 0
+		padding 2.5rem 0.1rem 2.9rem 2rem
+	
+	.navbar-toggle .icon-bar
+		background-color #000000
+	
+	.navbar-collapse
+		padding-right 15px
+		padding-left 15px
+	
+	.nav-menu
+		li
+			display list-item
+			a
+				padding 2rem 3rem
+				margin-right 0
+				&:active
+					background-color filter-background
+	
+	.form-controll
+		float left
+		
+	.search-button
+		left 10.4rem
+
+	.navdrop-menu
+		min-height 0rem
+		overflow hidden
+		margin 0
+		transition min-height 0.2s linear 0s
+	
+	.margin-0
+		margin 0
+		transition margin 0.2s linear 0s
+	//			Index
+	.collection.carousel-caption
+		width 85%
+
+	.bb-carousel
+		width 100%
+	
+	.news
+		width 100%
+		border-right none
+	
+	//			Catalog
+	.big-block-catalog
+		width 100%
+	
+	//			Footer
+	.footer-border-right
+		border-right none
+	
+	.footer-border
+		min-height 6rem
+		border-top none
+		padding 0 0 1rem
+	
+	.footer-border-right
+		min-height 30rem
+	
+	.question
+		float left
+		border-right 0.2rem solid footer-bord
+		border-bottom 0.2rem solid footer-bord
+		padding 1.5rem 0rem
+		width 50%
+		margin-bottom 3rem
+	
+	.question-p
+		i
+			padding-right 0.5rem
+	
+	.phone-order
+		float right
+		border-bottom 0.2rem solid footer-bord
+		width 50%
+		padding 1.5rem 0rem
+		margin-bottom 3rem
+		{clearAfter}
+	
+	.phone-question
+		width 16.5rem
+		margin 0 auto
+		{clearAfter}
+	
+	.social-network-block
+		clear both
+		margin-bottom 3rem
+		{clearAfter}
+	
+	.social-network
+		float right
+	
+	.policy-map
+		float left
+		padding-left 2rem
+@media screen and (max-width 500px)
+	
+	.policy-map
+		padding-left 1rem
+		margin-bottom 3rem
+
+	.social-network
+		clear left
+	
+	.arrival-button
+		width 90%
+	
+	.big-head-templ
+		font-size 4.3rem
+
+@media screen and (max-width 400px)
+	.arrival-button
+		width 80%
+	
+	.quick-links
+		padding-right 5rem
+	
+	.question, .phone-order
+		padding-right 0.4rem
+		padding-left 0.4rem

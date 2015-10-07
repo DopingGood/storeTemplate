@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Template</title>
+    <link rel="stylesheet" href="css/libs/bootstrap.min.css">
+    <link rel="stylesheet" href="css/libs/bootstrap-select.min.css">
+    <link rel="stylesheet" href="css/libs/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/libs/jquery.min.js"></script>
+    <script type="text/javascript" src="js/libs/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/libs/bootstrap-select.min.js"></script>
+    <script type="text/javascript" src="js/angular/vendor/angular.min.js"></script>
+  </head>
+  <body ng-app="storeHomeApp">
+    <div class="container header-back">
+      <div class="row header-row">
+        <div class="col-xs-2 col-sm-3 col-md-3 col-lg-3 hidde-xs"><a href="index.html" class="logotype">
+            <h1 class="hidden-xs">Template</h1>
+            <h1 class="visible-xs">TL</h1></a></div>
+        <div class="col-xs-3 col-sm-4 col-md-5 col-lg-6">
+          <select class="country">
+            <option title="UK">United Kingdom</option>
+            <option title="USA">United States</option>
+            <option title="Scot">Scotland</option>
+            <option title="Ger">Germany</option>
+            <option title="Fr">French</option>
+            <option title="It">Italy</option>
+            <option title="Sw">Swedish</option>
+            <option title="Sp">Spain</option>
+            <option title="Ir">Ireland</option>
+          </select>
+        </div>
+        <div class="col-sm-2 col-md-2 col-lg-2 hidden-xs"><a href="#" class="sign-up">
+            <p>E-mail sign up</p></a></div>
+        <div class="col-xs-5 col-sm-3 col-md-2 col-lg-1"><a href="#" class="bag-link"><img src="img/pouch.png" class="hidden-xs hidden-xs">
+            <p>Bag</p></a></div>
+        <div class="col-xs-2 visible-xs">
+          <button type="button" data-toggle="collapse" data-target="#menu" aria-expanded="false" class="navbar-toggle collapsed"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+        </div>
+      </div>
+      <div class="row header-navmenu hidden-xs">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <nav class="navbar default-navbar">
+            <div id="menu" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav nav-menu">
+                <li><a href="womenCatalog.html">Women</a></li>
+                <li><a href="category-men.html">Men</a></li>
+                <li><a href="#">Handbags</a></li>
+                <li><a href="#">Accessories</a></li>
+                <li><a href="#">Sale</a></li>
+                <li><a href="#">New Arrivals</a></li>
+                <li><a href="#">Clearance</a></li>
+                <li><a href="#">Store Locator</a></li>
+              </ul>
+              <form role="Search" class="navbar-form navbar-right">
+                <div class="form-group">
+                  <input type="text" placeholder="Style Name" class="form-controll">
+                  <button type="submit" class="search-button"><i class="fa fa-search"></i></button>
+                </div>
+              </form>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <div ng-controller="indexController" class="container-fluid">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-0">
+          <div id="carousel-banner" data-ride="carousel" class="carousel slide collection">
+            <oi class="carousel-indicators">
+              <li data-target="#carousel-banner" data-slide-to="0" class="active"></li>
+              <li data-target="#carousel-banner" data-slide-to="1"></li>
+              <li data-target="#carousel-banner" data-slide-to="2"></li>
+            </oi>
+            <div class="carousel-inner">
+              <div class="active item"><a href="#" class="black-white">
+                  <div class="carousel-caption border"></div>
+                  <div class="carousel-caption collection">
+                    <h5 class="collection-head">New collection</h5>
+                    <h1 class="collection-name">black white</h1>
+                    <p class="collection-time"><span>Spring</span> <span>Summer</span></p>
+                  </div></a></div>
+              <div class="item">
+                <div class="left-part hidden-xs"><a href="#" class="upb-carousel"><img src="img/adidas-hoody.png" class="bb-img">
+                    <h3 class="bb-h">
+                      Adidas Blue<br />
+                      <span>For men</span>
+                    </h3></a><a href="#" class="car-block-1"><img src="img/repair-patches.png" class="fb-img">
+                    <h3 class="fb-h">
+                      Repair Patches<br />
+                      <span><i class="fa fa-gbp"></i> 150.50</span>
+                    </h3></a><a href="#" class="car-block-2">
+                    <h3 class="car-news">Up to <span class="car-news-sale">30%</span> off your favorite style<br />
+                      <p class="car-news-under">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse odio enim, mollis quis dapibus quis, consectetur.</p>
+                    </h3></a><a href="#" class="car-block-3"><img src="img/sneakers.jpg" class="sb-img">
+                    <div class="patagonia-back"></div>
+                    <h3 class="car-3-h">
+                      Patagonia<br />
+                      <span>New</span>
+                    </h3></a>
+                </div><a href="#" class="bb-carousel">
+                  <h3 class="bb-head-car">
+                    Look book<br />
+                    <span>27 photos</span>
+                  </h3></a>
+                <div class="carbot-bord"></div>
+              </div>
+              <div class="item"><a href="#" class="black-white">
+                  <div class="carousel-caption border"></div>
+                  <div class="carousel-caption collection">
+                    <h5 class="collection-head">New collection</h5>
+                    <h1 class="collection-name">black white</h1>
+                    <p class="collection-time"><span>Spring</span> <span>Summer</span></p>
+                  </div></a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row margin-bottom-14 news-border">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"><a href="#" class="news"><img ng-src="img/red-sneakers.png" class="newsImg">
+            <h2 class="newsTitle">
+              Nike Red<br />
+              <span>New</span>
+            </h2></a><a href="#" class="scndNews hidden-sm hidden-xs"><img ng-src="img/caps-hats.png" class="newsImg">
+            <h2 class="newsTitle">
+              Caps & Hats<br />
+              <span>Sale -50%</span>
+            </h2></a><a href="#" class="smallNews visible-sm"><img ng-src="img/purse.png" class="newsImg">
+            <h3 class="sb-h">
+              Sale<br />
+              <span>-70%</span>
+            </h3></a></div>
+      </div>
+      <div class="row margin-bottom-15">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <h1 class="big-head-arriv">New arrivals</h1>
+        </div>
+        <div ng-repeat="arrival in newArrivals" class="col-xs-6 col-sm-4 col-md-3 col-lg-3 arrivals">
+          <new-arrivals info="arrival"></new-arrivals>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"><a href="#" class="arrival-button">All arrivals</a></div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <div class="about-template">
+            <h1 class="big-head-templ">About template</h1>
+            <p class="template-summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit phasellus id aliquam nibh, nec laoreet dui praesent accumsan cursus mauris, ut porta massa suscipit ac</p>
+            <p class="about-template-p">Maecenas eget varius lorem. Etiam in eros vitae sapien euismod fermentum. Proin scelerisque eget orci sit amet iaculis. Donec pellentesque turpis quis mi scelerisque egestas. Maecenas id ex neque. Sed at est sit amet justo pharetra elementum.</p>
+            <h3 class="about-template-head">The template group is also well known for its <a href="#" class="about-template-a">commitment to society</a></h3>
+            <p class="template-summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus id aliquam nibh, nec laoreet dui</p>
+            <p class="about-template-p">Quisque nec euismod dui, id suscipit tortor. Quisque varius purus lectus, rutrum viverra purus luctus ut. Integer tristique lectus felis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam suscipit euismod nisi ut fringilla. Donec et tellus ut magna dignissim bibendum et placerat enim. Cum sociis natoque penatibus et magnis dis.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid margin-bottom-3">
+      <div class="row">
+        <div class="col-xs-12 col-sm-7 col-md-6 col-lg-6 footer-border-right">
+          <div class="quick-links">
+            <h4 class="footer-list-header">Quick Links</h4>
+            <ul class="footer-list">
+              <li><a href="#">Store locator</a></li>
+              <li><a href="#">Gift cards</a></li>
+              <li><a href="#">Size guide</a></li>
+              <li><a href="#">About us</a></li>
+              <li><a href="#">Support</a></li>
+            </ul>
+          </div>
+          <div class="custom-care">
+            <h4 class="footer-list-header">Custom Care</h4>
+            <ul class="footer-list">
+              <li><a href="#">Custom service</a></li>
+              <li><a href="#">Track my order</a></li>
+              <li><a href="#">Return policy</a></li>
+              <li><a href="#">Shipping & delivery</a></li>
+              <li><a href="#">Contact us</a></li>
+              <li><a href="#">Careers</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-5 col-md-6 col-lg-6 footer-border">
+          <div class="question">
+            <div class="phone-question">
+              <h4 class="footer-header">Question</h4>
+              <p class="question-p"><i class="fa fa-twitter"></i> Tweet us <a href="#" class="tweeter-template">@Template</a></p>
+            </div>
+          </div>
+          <div class="phone-order">
+            <div class="phone-question">
+              <h4 class="footer-header">Order by Phone</h4>
+              <p class="phone-order-number">8-892-654-61-37</p>
+            </div>
+          </div>
+          <p class="own-dilevery hidden-sm hidden-xs">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam suscipit euismod nisi ut fringilla. Donec et tellus ut magna dignissim bibendum et placerat enim. Cum sociis natoque penatibus et magnis dis parturient montes.</p>
+          <div class="social-network-block">
+            <ul class="policy-map visible-xs">
+              <li><a href="#">Legal notice</a></li>
+              <li><a href="#">Privacy policy</a></li>
+              <li><a href="#">Site map</a></li>
+            </ul>
+            <ul class="social-network">
+              <li><a href="#" class="facebook-link"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="#" class="twitter-link"><i class="fa fa-twitter"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container margin-bottom-2">
+      <div class="row">
+        <div class="col-xs-8 col-sm-5 col-md-4 col-lg-4">
+          <p class="copyright"><i class="fa fa-copyright"></i> 2010-2015, The Template Group inc.</p>
+        </div>
+        <div class="col-xs-4 col-sm-2 col-md-4 col-lg-4">
+          <p class="share">Share <span>1437</span></p>
+        </div>
+        <div class="col-sm-5 col-md-4 col-lg-4">
+          <ul class="policy-map hidden-xs">
+            <li><a href="#">Legal notice</a></li>
+            <li><a href="#">Privacy policy</a></li>
+            <li><a href="#">Site map</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+  <!--				Modules-->
+  <script type="text/javascript" src="js/angular/app.js"></script>
+  <!--				Controllers-->
+  <script type="text/javascript" src="js/angular/controller/indexController.js"></script>
+  <!--				Directives-->
+  <script type="text/javascript" src="js/angular/directives/newArrivals.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>
+</html>

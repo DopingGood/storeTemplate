@@ -1,0 +1,5 @@
+a(href="#" class="arrivals-text")
+	img(ng-src="{{ info.image }}" class="arrivals-img")
+	h3.arrivals-title
+		|{{ info.name }}<br />
+		|<span class="arrivals-cost">{{ info.cost | currency:"£" }}</span> <span class="arrivals-new">{{ info.timing }}</span>

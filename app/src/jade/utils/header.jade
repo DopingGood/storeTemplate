@@ -1,0 +1,55 @@
+.container.header-back
+	.row.header-row
+		.col-xs-2.col-sm-3.col-md-3.col-lg-3.hidde-xs
+			a(href="index.html" class="logotype")
+				h1.hidden-xs Template
+				h1.visible-xs TL
+		.col-xs-3.col-sm-4.col-md-5.col-lg-6
+			select(class="country")
+				option(title="UK") United Kingdom
+				option(title="USA") United States
+				option(title="Scot") Scotland
+				option(title="Ger") Germany
+				option(title="Fr") French
+				option(title="It") Italy
+				option(title="Sw") Swedish
+				option(title="Sp") Spain
+				option(title="Ir") Ireland
+		.col-sm-2.col-md-2.col-lg-2.hidden-xs
+			a(href="#" class="sign-up")
+				p E-mail sign up
+		.col-xs-5.col-sm-3.col-md-2.col-lg-1
+			a(href="#" class="bag-link")
+				img(src="img/pouch.png" class="hidden-xs hidden-xs")
+				p Bag
+		.col-xs-2.visible-xs
+			button(type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu" aria-expanded="false")
+				span(class="icon-bar")
+				span(class="icon-bar")
+				span(class="icon-bar")
+	.row.header-navmenu.hidden-xs
+		.col-xs-12.col-sm-12.col-md-12.col-lg-12
+			nav.navbar.default-navbar
+				.navbar-collapse.collapse#menu
+					ul.nav.navbar-nav.nav-menu
+						li
+							a(href="womenCatalog.html") Women
+						li
+							a(href="category-men.html") Men
+						li
+							a(href="#") Handbags
+						li
+							a(href="#") Accessories
+						li
+							a(href="#") Sale
+						li
+							a(href="#") New Arrivals
+						li
+							a(href="#") Clearance
+						li
+							a(href="#") Store Locator
+					form(class="navbar-form navbar-right" role="Search")
+						.form-group
+							input(type="text" class="form-controll" placeholder="Style Name")
+							button(type="submit" class="search-button")
+								i(class="fa fa-search")
