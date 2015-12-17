@@ -1,11 +1,11 @@
-.container.header-back
+.container.header-back(ng-controller="mainController")
 	.row.header-row
 		.col-xs-2.col-sm-3.col-md-3.col-lg-3.hidde-xs
-			a(href="index.html" class="logotype")
+			a(href="#/" class="logotype")
 				h1.hidden-xs Template
 				h1.visible-xs TL
 		.col-xs-3.col-sm-4.col-md-5.col-lg-6
-			select(class="country")
+			select(class="country", country-select="")
 				option(title="UK") United Kingdom
 				option(title="USA") United States
 				option(title="Scot") Scotland
@@ -19,11 +19,11 @@
 			a(href="#" class="sign-up")
 				p E-mail sign up
 		.col-xs-5.col-sm-3.col-md-2.col-lg-1
-			a(href="#" class="bag-link")
+			a(href="#" class="bag-link" bag-menu="")
 				img(src="img/pouch.png" class="hidden-xs hidden-xs")
 				p Bag
 		.col-xs-2.visible-xs
-			button(type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu" aria-expanded="false")
+			button(type="button", class="navbar-toggle collapsed", data-toggle="collapse", data-target="#menu", aria-expanded="false", nav-small-menu="")
 				span(class="icon-bar")
 				span(class="icon-bar")
 				span(class="icon-bar")
@@ -33,9 +33,9 @@
 				.navbar-collapse.collapse#menu
 					ul.nav.navbar-nav.nav-menu
 						li
-							a(href="womenCatalog.html") Women
+							a(href="#/womenCatalog") Women
 						li
-							a(href="category-men.html") Men
+							a(href="#/category-men") Men
 						li
 							a(href="#") Handbags
 						li

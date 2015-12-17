@@ -1,57 +1,84 @@
 app.controller('catalogController', ['$scope', function($scope) {
 	$scope.womenFashions = [{
-			style: 'Cassual style'
+			value: 'Cassual style'
 		},
 		{
-			style: 'New Look'
+			value: 'New Look'
 		},
 		{
-			style: 'Spot Vintage'
+			value: 'Spot Vintage'
 		},
 		{
-			style: 'Classic style'
+			value: 'Classic style'
+		},
+		{
+			value: 'New Look'
+		},
+		{
+			value: 'Spot Vintage'
+		},
+		{
+			value: 'Classic style'
+		},
+		{
+			value: 'New Look'
+		},
+		{
+			value: 'Spot Vintage'
+		},
+		{
+			value: 'Classic style'
+		},
+		{
+			value: 'New Look'
+		},
+		{
+			value: 'Spot Vintage'
+		},
+		{
+			value: 'Classic style'
 	}];
 	$scope.womenTypes = [{
-			type: 'Coats & Jackets'
+			value: 'Coats & Jackets'
 		},
 		{
-			type: 'Dresses'
+			value: 'Dresses'
 		},
 		{
-			type: 'T-shirts'
+			value: 'T-shirts'
 		},
 		{
-			type: 'Jeans'
+			value: 'Jeans'
 		},
 		{
-			type: 'Shirt'
+			value: 'Shirt'
 	}];
 	$scope.colors = [{
-			color: 'Black',
+			value: 'Black',
 		},
 		{
-			color: 'Blue'
+			value: 'Blue'
 		},
 		{
-			color: 'Green'
+			value: 'Green'
 		},
 		{
-			color: 'Yellow'
+			value: 'Yellow'
 		},
 		{
-			color: 'Golden'
+			value: 'Golden'
 		},
 		{
-			color: 'White'
+			value: 'White'
 	}];
 	$scope.brands = [{
-			name: 'Antipodium'
+			value: 'Antipodium'
 		},
 		{
-			name: 'Adidas'
+			value: 'Adidas'
 		},
 		{
-			name: 'New Balance'
+			value: 'New Balance'
 	}];
 	$scope.sizes = [{
 			value: 'UK 18'
@@ -61,6 +88,15 @@ app.controller('catalogController', ['$scope', function($scope) {
 		},
 		{
 			value: 'New Balance'
+	}];
+	$scope.prices = [{
+		value: 'To £99'
+	},
+	{
+		value: '£100-£299'
+	},
+	{
+		value: '£300-£399'
 	}];
 	$scope.goods = [{
 			image: 'img/leg-jeans.png',

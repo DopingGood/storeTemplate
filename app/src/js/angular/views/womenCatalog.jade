@@ -1,0 +1,126 @@
+div(ng-controller="catalogController")
+	.filter
+		.container
+			.row(goods-filter="")
+				.col-xs-12.col-sm-12.col-md-12.col-lg-12.padding-0
+					form(name="filters" class='hidden-sm hidden-xs' method='post')
+						select(name="womFash[]" ng-model="fashionSelect" ng-options="wFashion.value for wFashion in womenFashions" class="fashion-filter filter-select" multiple)
+						select(name="womType[]" ng-model="TypeSelect" ng-options="wType.value for wType in womenTypes" class="type-filter filter-select" multiple)
+						select(name="womColor[]" ng-model="ColorSelect" ng-options="fColor.value for fColor in colors" class="color-filter filter-select" multiple)
+						select(name="womBrand[]" ng-model="BrandSelect" ng-options="brand.value for brand in brands" class="brand-filter filter-select" multiple)
+						select(name="womSize[]" ng-model="SizeSelect" ng-options="size.value for size in sizes" class="size-filter filter-select" multiple)
+						select(name="womPrice[]" ng-model="PriceSelect" ng-options="price.value for price in prices" class="price-filter filter-select" multiple)
+					form(method="", action="").visible-xs.visible-sm
+						.smf-bar(small-filter="")
+							button(type="button" class="smf-btn btn btn-default")
+								ul.smf-btn-title
+									li
+										p(data-filter-txt="Fashion,", class="fashion-p")
+											|Fashion,
+									li
+										p(data-filter-txt="Product type,", class="type-p")
+											|Product type,
+									li
+										p(data-filter-txt="Color,", class="color-p")
+											|Color,
+									li
+										p(data-filter-txt="Brand,", class="brand-p")
+											|Brand,
+									li
+										p(data-filter-txt="Size,", class="size-p")
+											|Size,
+									li
+										p(data-filter-txt="Price range", class="price-p")
+											|Price range
+								span.filter-caret.car-cl
+									i(class="fa fa-times")
+							.smf-drop-menu
+								h3.smf-dropmen-h Drag and Select
+								.filterSelct-row
+									h5.smf-row-h Fashion
+									.smul-wrap
+										ul.smf-fashion.smf-ul
+											li.f-nSelectLi.naughtS
+												a(href="#" class="f-nSelect" data-filter-select="fashion")
+													|Not selected,
+											li(ng-repeat='WF in womenFashions')
+												a(href="#" class="f-select" data-filter-select="fashion")
+													|{{ WF.value }}
+								.filterSelct-row
+									h5.smf-row-h Product type
+									.smul-wrap
+										ul.smf-type.smf-ul
+											li.f-nSelectLi.naughtS
+												a(href="#" class="f-nSelect" data-filter-select="type")
+													|Not selected,
+											li(ng-repeat='WT in womenTypes')
+												a(href="#" class="f-select" data-filter-select="type")
+													|{{ WT.value }}
+								.filterSelct-row
+									h5.smf-row-h Color
+									.smul-wrap
+										ul.smf-color.smf-ul
+											li.f-nSelectLi.naughtS
+												a(href="#" class="f-nSelect" data-filter-select="color")
+													|Not selected,
+											li(ng-repeat='clr in colors')
+												a(href="#" class="f-select" data-filter-select="color")
+													|{{ clr.value }}
+								.filterSelct-row
+									h5.smf-row-h Brand
+									.smul-wrap
+										ul.smf-brand.smf-ul
+											li.f-nSelectLi.naughtS
+												a(href="#" class="f-nSelect" data-filter-select="brand")
+													|Not selected,
+											li(ng-repeat='brand in brands')
+												a(href="#" class="f-select" data-filter-select="brand")
+													|{{ brand.value }}
+								.filterSelct-row
+									h5.smf-row-h Size
+									.smul-wrap
+										ul.smf-size.smf-ul
+											li.f-nSelectLi.naughtS
+												a(href="#" class="f-nSelect" data-filter-select="size")
+													|Not selected,
+											li(ng-repeat='size in sizes')
+												a(href="#" class="f-select" data-filter-select="size")
+													|{{ size.value }}
+								.filterSelct-row
+									h5.smf-row-h Price range
+									.smul-wrap
+										ul.smf-price.smf-ul
+											li.f-nSelectLi.naughtS
+												a(href="#" class="f-nSelect" data-filter-select="price")
+													|Not selected,
+											li(ng-repeat='price in prices')
+												a(href="#" class="f-select" data-filter-select="price")
+													|{{ price.value }}
+	.container.margin-bottom-15
+		.row
+			.col-xs-12.col-sm-12.col-md-12.col-lg-12
+				h3.news-header
+					|Last weekend <span>extra 50%</span> off on all reduced boots and shoulder bags
+				p.news-p This offer is valid in-store and online. Prices displayed reflect this additional discount. This offer ends at 11:59 GMT on March 1st 2015
+			.col-xs-6.col-sm-4.col-md-3.col-lg-3(ng-repeat="good in goods" class="arrivals")
+				new-arrivals(info='good')
+			.col-xs-12.col-sm-12.col-md-12.col-lg-12
+				a(href="#" class="arrival-button") Show more
+	.container-fluid
+		.row
+			.col-xs-12.col-sm-12.col-md-12.col-lg-12.padding-0
+				a(href="#" class="big-block-catalog")
+					img(src="img/adidas-hoody.png" class="bb-img")
+					h3.bb-h
+						|Adidas Blue<br />
+						|<span>For men</span>
+				a(href="#" class="block-catalog hidden-xs")
+					img(src="img/repair-patches.png" class="fb-img")
+					h3.fb-h
+						|Repair Patches<br />
+						|<span><i class="fa fa-gbp"></i> 150.50</span>
+				a(href="#" class="other-block-catalog hidden-sm hidden-xs")
+					img(src="img/purse.png" class='sb-img')
+					h3.sb-h
+						|Sale<br />
+						|<span>-70%</span>

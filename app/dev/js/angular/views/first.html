@@ -1,0 +1,94 @@
+
+<div ng-controller="indexController">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-0">
+        <div id="carousel-banner" data-ride="carousel" slick-carousel="" class="carousel slide collection">
+          <oi class="carousel-indicators">
+            <li data-target="#carousel-banner" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-banner" data-slide-to="1"></li>
+            <li data-target="#carousel-banner" data-slide-to="2"></li>
+          </oi>
+          <div class="carousel-inner">
+            <div class="active item"><a href="#" class="black-white">
+                <div class="carousel-caption border"></div>
+                <div class="carousel-caption collection">
+                  <h5 class="collection-head">New collection</h5>
+                  <h1 class="collection-name">black white</h1>
+                  <p class="collection-time"><span>Spring</span> <span>Summer</span></p>
+                </div></a></div>
+            <div class="item">
+              <div class="left-part hidden-xs"><a href="#" class="upb-carousel"><img src="img/adidas-hoody.png" class="bb-img"/>
+                  <h3 class="bb-h">
+                    Adidas Blue<br />
+                    <span>For men</span>
+                  </h3></a><a href="#" class="car-block-1"><img src="img/repair-patches.png" class="fb-img"/>
+                  <h3 class="fb-h">
+                    Repair Patches<br />
+                    <span><i class="fa fa-gbp"></i> 150.50</span>
+                  </h3></a><a href="#" class="car-block-2">
+                  <h3 class="car-news">Up to <span class="car-news-sale">30%</span> off your favorite style<br />
+                    <p class="car-news-under">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse odio enim, mollis quis dapibus quis, consectetur.</p>
+                  </h3></a><a href="#" class="car-block-3"><img src="img/sneakers.jpg" class="sb-img"/>
+                  <div class="patagonia-back"></div>
+                  <h3 class="car-3-h">
+                    Patagonia<br />
+                    <span>New</span>
+                  </h3></a></div><a href="#" class="bb-carousel">
+                <h3 class="bb-head-car">
+                  Look book<br />
+                  <span>27 photos</span>
+                </h3></a>
+              <div class="carbot-bord"></div>
+            </div>
+            <div class="item"><a href="#" class="black-white">
+                <div class="carousel-caption border"></div>
+                <div class="carousel-caption collection">
+                  <h5 class="collection-head">New collection</h5>
+                  <h1 class="collection-name">black white</h1>
+                  <p class="collection-time"><span>Spring</span> <span>Summer</span></p>
+                </div></a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row margin-bottom-14 news-border">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"><a href="#" class="news"><img ng-src="img/red-sneakers.png" class="newsImg"/>
+          <h2 class="newsTitle">
+            Nike Red<br />
+            <span>New</span>
+          </h2></a><a href="#" class="scndNews hidden-sm hidden-xs"><img ng-src="img/caps-hats.png" class="newsImg"/>
+          <h2 class="newsTitle">
+            Caps & Hats<br />
+            <span>Sale -50%</span>
+          </h2></a><a href="#" class="smallNews visible-sm"><img ng-src="img/purse.png" class="newsImg"/>
+          <h3 class="sb-h">
+            Sale<br />
+            <span>-70%</span>
+          </h3></a></div>
+    </div>
+    <div class="row margin-bottom-15">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <h1 class="big-head-arriv">New arrivals</h1>
+      </div>
+      <div ng-repeat="arrival in newArrivals" class="col-xs-6 col-sm-4 col-md-3 col-lg-3 arrivals">
+        <new-arrivals info="arrival"></new-arrivals>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"><a href="#" class="arrival-button">All arrivals</a></div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="about-template">
+          <h1 class="big-head-templ">About template</h1>
+          <p class="template-summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit phasellus id aliquam nibh, nec laoreet dui praesent accumsan cursus mauris, ut porta massa suscipit ac</p>
+          <p class="about-template-p">Maecenas eget varius lorem. Etiam in eros vitae sapien euismod fermentum. Proin scelerisque eget orci sit amet iaculis. Donec pellentesque turpis quis mi scelerisque egestas. Maecenas id ex neque. Sed at est sit amet justo pharetra elementum.</p>
+          <h3 class="about-template-head">The template group is also well known for its <a href="#" class="about-template-a">commitment to society</a></h3>
+          <p class="template-summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus id aliquam nibh, nec laoreet dui</p>
+          <p class="about-template-p">Quisque nec euismod dui, id suscipit tortor. Quisque varius purus lectus, rutrum viverra purus luctus ut. Integer tristique lectus felis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam suscipit euismod nisi ut fringilla. Donec et tellus ut magna dignissim bibendum et placerat enim. Cum sociis natoque penatibus et magnis dis.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
