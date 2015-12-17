@@ -1,106 +1,46 @@
 doctype html
-html
-	include utils/head
-	body(ng-app="storeHomeApp")
+html(lang='en' ng-app="storeHomeApp")
+	head
+		meta(charset="utf-8")
+		meta(http-equiv="X-UA-Compatible", content="IE=edge")
+		meta(name="viewport", content="width=device-width, initial-scale=1")
+		title Template
+		link(rel="stylesheet", href="css/libs/bootstrap.min.css")
+		link(rel="stylesheet", href="css/libs/bootstrap-select.min.css")
+		link(rel="stylesheet", href="css/libs/font-awesome.min.css")
+		link(rel="stylesheet", href="css/style.css")
+	body
 		include utils/header
-		.container-fluid(ng-controller="indexController")
-			.row
-				.col-xs-12.col-sm-12.col-md-12.col-lg-12.padding-0
-					.carousel.slide.collection#carousel-banner(data-ride="carousel")
-						oi.carousel-indicators
-							li(data-target="#carousel-banner" data-slide-to="0" class="active")
-							li(data-target="#carousel-banner" data-slide-to="1")
-							li(data-target="#carousel-banner" data-slide-to="2")
-						.carousel-inner
-							.active.item
-								a(href="#" class="black-white")
-									.carousel-caption.border
-									.carousel-caption.collection
-										h5.collection-head New collection
-										h1.collection-name black white
-										p.collection-time
-											|<span>Spring</span> <span>Summer</span>
-							.item
-								.left-part.hidden-xs
-									a(href="#").upb-carousel
-										img(src="img/adidas-hoody.png" class="bb-img")
-										h3.bb-h
-											|Adidas Blue<br />
-											|<span>For men</span>
-									a(href="#").car-block-1
-										img(src="img/repair-patches.png" class="fb-img")
-										h3.fb-h
-											|Repair Patches<br />
-											|<span><i class="fa fa-gbp"></i> 150.50</span>
-									//- a(href="#").car-sm-blocks
-									//- 	img(src="img/purse.png" class='sb-img')
-									//- 	h3.sb-h
-									//- 		|Sale<br />
-									//- 		|<span>-70%</span>
-									a(href="#").car-block-2
-										h3.car-news
-											|Up to <span class="car-news-sale">30%</span> off your favorite style<br />
-											p(class="car-news-under") Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse odio enim, mollis quis dapibus quis, consectetur.
-									a(href="#").car-block-3
-										img(src="img/sneakers.jpg" class='sb-img')
-										.patagonia-back
-										h3.car-3-h
-											|Patagonia<br />
-											|<span>New</span>
-								a(href="#").bb-carousel
-									h3.bb-head-car
-										|Look book<br />
-										|<span>27 photos</span>
-								.carbot-bord
-							.item
-								a(href="#" class="black-white")
-									.carousel-caption.border
-									.carousel-caption.collection
-										h5.collection-head New collection
-										h1.collection-name black white
-										p.collection-time
-											|<span>Spring</span> <span>Summer</span>
-			.row.margin-bottom-14.news-border
-				.col-xs-12.col-sm-12.col-md-12.col-lg-12
-					a(href="#" class="news")
-						img(ng-src="img/red-sneakers.png" class="newsImg")
-						h2.newsTitle
-							|Nike Red<br />
-							|<span>New</span>
-					a(href="#" class="scndNews hidden-sm hidden-xs")
-						img(ng-src="img/caps-hats.png" class="newsImg")
-						h2.newsTitle
-							|Caps & Hats<br />
-							|<span>Sale -50%</span>
-					a(href="#" class="smallNews visible-sm")
-						img(ng-src="img/purse.png" class="newsImg")
-						h3.sb-h
-								|Sale<br />
-								|<span>-70%</span>
-			.row.margin-bottom-15
-				.col-xs-12.col-sm-12.col-md-12.col-lg-12
-					h1.big-head-arriv New arrivals
-				.col-xs-6.col-sm-4.col-md-3.col-lg-3(ng-repeat="arrival in newArrivals" class="arrivals")
-					new-arrivals(info="arrival")
-				.col-xs-12.col-sm-12.col-md-12.col-lg-12
-					a(href="#" class="arrival-button") All arrivals
-		.container
-			.row
-				.col-xs-12.col-sm-12.col-md-12.col-lg-12
-					.about-template
-						h1.big-head-templ About template
-						p.template-summary Lorem ipsum dolor sit amet, consectetur adipiscing elit phasellus id aliquam nibh, nec laoreet dui praesent accumsan cursus mauris, ut porta massa suscipit ac
-						p.about-template-p Maecenas eget varius lorem. Etiam in eros vitae sapien euismod fermentum. Proin scelerisque eget orci sit amet iaculis. Donec pellentesque turpis quis mi scelerisque egestas. Maecenas id ex neque. Sed at est sit amet justo pharetra elementum.
-						h3.about-template-head The template group is also well known for its <a href="#" class="about-template-a">commitment to society</a>
-						p.template-summary Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus id aliquam nibh, nec laoreet dui
-						p.about-template-p Quisque nec euismod dui, id suscipit tortor. Quisque varius purus lectus, rutrum viverra purus luctus ut. Integer tristique lectus felis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam suscipit euismod nisi ut fringilla. Donec et tellus ut magna dignissim bibendum et placerat enim. Cum sociis natoque penatibus et magnis dis.
+		div(ui-view)
 		include utils/footer
-	//				Modules
+		include utils/bag
+		.modal-back
+	script(type="text/javascript", src="js/libs/jquery.min.js")
+	script(type="text/javascript", src="js/libs/promise.min.js")
+	script(type="text/javascript", src="js/libs/fetch.js")
+	script(type="text/javascript", src="js/libs/bootstrap.min.js")
+	script(type="text/javascript", src="js/libs/bootstrap-select.min.js")
+	script(type="text/javascript", src="js/angular/vendor/angular.min.js")
+	script(type="text/javascript", src="js/angular/vendor/angular-ui-router.min.js")
+	//- script(type="text/javascript", src="js/angular/vendor/angular-route.min.js")
+	//- script(type="text/javascript", src="js/script.js")
+
+	//-				Modules
 	script(type="text/javascript", src="js/angular/app.js")
-
-	//				Controllers
+	
+	//-				Controllers
+	script(type="text/javascript", src="js/angular/controller/mainController.js")
 	script(type="text/javascript", src="js/angular/controller/indexController.js")
-
-	//				Directives
+	script(type="text/javascript", src="js/angular/controller/catalogController.js")
+	//-				Directives
 	script(type="text/javascript", src="js/angular/directives/newArrivals.js")
-	script(type="text/javascript", src="js/script.js")
+	script(type="text/javascript", src="js/angular/directives/navSmallMenu.js")
+	script(type="text/javascript", src="js/angular/directives/slickCarousel.js")
+	script(type="text/javascript", src="js/angular/directives/countrySelect.js")
+	script(type="text/javascript", src="js/angular/directives/bagMenu.js")
+	//- script(type="text/javascript", src="js/angular/directives/dragFilter.js")
+	script(type="text/javascript", src="js/angular/directives/filterMenu.js")
+	script(type="text/javascript", src="js/angular/directives/goodsFilter.js")
+	script(type="text/javascript", src="js/angular/directives/preventDef.js")
+	script(type="text/javascript", src="js/angular/directives/smallFilter.js")
+	//- script(type="text/javascript", src="js/script.js")

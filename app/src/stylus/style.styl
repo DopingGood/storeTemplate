@@ -30,6 +30,19 @@ blocks-headers(color)
 	line-height 1.1
 	font-size 2.7rem
 
+grabBlock =
+	cursor move
+	cursor grab
+	cursor -webkit-grab
+	cursor -moz-grab
+	cursor url(../img/openhand.cur), move
+
+grabbingBlock =
+	cursor move
+	cursor grabbing
+	cursor -webkit-grabbing
+	cursor -moz-grabbing
+	cursor url(../img/closedhand.cur), move
 //			Header
 .header-back
 	padding 2.5rem 1.5rem
@@ -593,11 +606,10 @@ footer-two-part =
 
 //			Filters
 filter =
-	.filter-option
-		font-family filter-font
-		font-weight bold
-		color select-filter
-		font-size 1.6rem
+	font-family filter-font
+	font-weight bold
+	color select-filter
+	font-size 1.7rem
 
 filterBefore(cont)
 	&:before
@@ -610,13 +622,16 @@ filterBefore(cont)
 		font-weight bold
 		z-index 9
 		top 25%
-		left 5%
+		left 6%
+
+.bootstrap-select.btn-group.show-tick .dropdown-menu li a span.text
+	margin-right 0
 
 .filter-select.btn-group:not(.input-group-btn), .bootstrap-select.btn-group[class*=col-]
 	float left
 
 .filter-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn)
-	width 20%	
+	width 16.5%	
 
 div.filter-select
 	height 6.3rem
@@ -628,8 +643,9 @@ div.filter-select
 div.filter-select:nth-child(2)
 	padding-left 0.2rem
 
-div.fashion-filter, div.type-filter, div.color-filter, div.brand-filter, div.size-filter
-	{filter}
+div.fashion-filter, div.type-filter, div.color-filter, div.brand-filter, div.size-filter, div.price-filter
+	.filter-option
+		{filter}
 
 .fashion-filter.selectedFilter
 	filterBefore("Fashion")
@@ -645,6 +661,9 @@ div.fashion-filter, div.type-filter, div.color-filter, div.brand-filter, div.siz
 
 .size-filter.selectedFilter
 	filterBefore("Size")
+
+.size-filter.selectedFilter
+	filterBefore("Price range")
 
 div.selectedFilter
 	button
@@ -674,6 +693,7 @@ catalog-low-blocks =
 	height 38.5rem
 	float left
 	position relative
+	overflow hidden
 
 .big-block-catalog
 	width 50%
@@ -730,6 +750,26 @@ catalog-low-blocks =
 		color footer-italic-color
 		font-family footer-italic
 		font-size 1.6rem
+
+.modal-back
+	display none
+	opacity 0
+	position fixed
+	top 0
+	left 0
+	right 0
+	bottom 0
+	background-color #000000
+	transition opacity 0.2s linear
+	z-index 1000
+
+.modal-content
+	position absolute
+	background-color #ffffff
+	left 50%
+	transform translateX(-50%)
+	top 30%
+	padding 2rem
 
 @media screen and (max-width 1199px)
 	//			Nav Menu
@@ -796,12 +836,146 @@ catalog-low-blocks =
 
 	.block-catalog
 		width 35%
-	//			Footer
+	//			Filter
+	.filter .col-xs-12.col-sm-12.col-md-12.col-lg-12.padding-0
+		padding-right 15px
+		padding-left 15px
+
+	.smf-bar
+		height 6.3rem
+		position relative
+		// border 5px solid transparent
+
+	.smf-btn
+		width 100%
+		height 100%
+		padding-top 2.3rem
+		text-align left
+		border none
+		&:hover, &:focus
+			background-color #fff
+			outline none
+			border-bottom-color news-bord
+	
+	.smf-btn-title
+		float left
+		margin-bottom 0
+		width 90%
+		overflow hidden
+		li
+			display inline-block
+			list-style-type none
+			p
+				{filter}
+	
+	.filter-caret
+		margin-left 1rem
+		margin-right 1rem
+		float right
+		i
+			color option-filter
+			font-size 1.9rem
+	
+	.filter-caret.car-cl
+		display block
+		width 0
+		height 0
+		border-left 4px solid transparent
+		border-right 4px solid transparent
+		border-top 4px solid #000
+		margin-top 0.9rem
+		i
+			display none
+
+	.smf-drop-menu
+		display none
+		width 100%
+		position absolute
+		background-color #ffffff
+		transition max-height 0.2s linear
+		border-radius 0 0 0 0.4rem
+		padding 3rem 4rem
+		box-shadow 0px 8px 15px rgba(0,0,0,0.4)
+		top 101%
+		overflow hidden
+		z-index 1100
+
+	.smf-dropmen-h
+		font-family spHeader-font
+		color header-color
+		font-size 1.9rem
+		margin-top 0
+		margin-bottom 5rem
+	
+	.filterSelct-row
+		overflow visible
+		height 8rem
+
+	.smf-row-h
+		font-family helv-serif
+		font-weight 600
+		color header-color
+		font-size 1.3rem
+		margin-bottom 0
+
+	.smf-ul
+		display inline-block
+		// width 280rem
+		white-space nowrap
+		position relative
+		margin-bottom 0
+		padding 15px 0
+		{grabBlock}
+		&:active
+			{grabbingBlock}
+		li
+			list-style-type none
+			display inline-block
+			margin-right 0.7rem
+			a
+				position relative
+				font-family filter-font
+				font-size 2.5rem
+				transition color 0.2s linear 0s
+				&:hover
+					color option-filter
+					transition color 0.2s linear 0s
+				
+		li:not(:last-child)	.f-select:after
+			display inline-block
+			content ','
+			position relative
+			bottom 0
+			right 0
+	
+	.f-nSelect
+		color select-filter
+	
+	.f-select
+		color smFilter-clr
+	
+	.opacity-05
+		opacity 0.5
+		transition opacity 0.2s linear
+
+	button.smFilterActive
+		height 101%
+		border-bottom 1px solid news-bord
+		border-bottom-right-radius 0
+		border-bottom-left-radius 0
+		box-shadow 0px 5px 20px rgba(0,0,0,0.4)
+		.smf-btn-title li p
+			color smFilter-clr
+	
+	.flSelected a
+		color option-filter
+			
 	.question, .phone-order
 		float none
 	
 	.policy-map li
 		margin-right 2rem
+
 @media screen and (max-width 767px)
 	//			Nav Menu
 	.header-back
@@ -947,3 +1121,14 @@ catalog-low-blocks =
 	.question, .phone-order
 		padding-right 0.4rem
 		padding-left 0.4rem
+
+.el-visible
+	display block
+
+.opacity-05
+	opacity 0.5
+	transition opacity 0.2s linear
+
+.zindex-1100 {
+	z-index 1100
+}
