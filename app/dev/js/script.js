@@ -211,12 +211,13 @@ document.addEventListener('DOMContentLoaded', function () {
             }, 300);
         }
     };
+    // Filter in small screen
     for (var i = 0; i < smFilterLinks.length; i++) {
         smFilterLinks[i].addEventListener('click', prevDef);
         smFilterLinks[i].addEventListener('click', function () {
-            var smSlctdLi = this.parentElement, smSlctRaw = this.closest('ul'), notSctdLi = smSlctRaw.getElementsByClassName("f-nSelectLi")[0];
+            var smSlctdLi = this.parentElement, smSlctRaw = this.closest('ul'), notSctdLi = smSlctRaw.getElementsByClassName("f-nSelectLi")[0], fashionName = ddMenuSm.querySelectorAll('fashion-li a')[0];
+            // If clicked not selected
             if (this.classList.contains('f-nSelect') == true) {
-                // var notSctdLi = this.parentElement;
                 if (notSctdLi.classList.contains("naughtS") == false) {
                     var slctdLi1 = smSlctRaw.getElementsByClassName('flSelected');
                     if (slctdLi1.length > 0) {
@@ -234,6 +235,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
             else {
                 var fashionUl = ddMenuSm.getElementsByClassName('smf-fashion')[0], typeUl = ddMenuSm.getElementsByClassName('smf-type')[0], colorUl = ddMenuSm.getElementsByClassName('smf-color')[0], brandUl = ddMenuSm.getElementsByClassName('smf-brand')[0], sizeUl = ddMenuSm.getElementsByClassName('smf-size')[0], priceUl = ddMenuSm.getElementsByClassName('smf-price')[0];
+                // Remove selection
                 if (smSlctdLi.getAttribute('data-filter') == null) {
                     smSlctdLi.classList.add('flSelected');
                     smSlctdLi.setAttribute('data-filter', 'selected');
@@ -253,9 +255,15 @@ document.addEventListener('DOMContentLoaded', function () {
                 ;
             }
             ;
+            // Send filter's data to server
             switch (this.getAttribute("data-filter-select")) {
                 case "fashion":
                     postSender('FFashion', fashionUl);
+                    if (smSlctdLi.classList.contains('flSelected') == false) {
+                        var sltionText = this.textContent;
+                        fashionName.textContent =
+                        ;
+                    }
                     break;
                 case "type":
                     postSender('FFtype', typeUl);
@@ -306,3 +314,25 @@ if (menuButton) {
     });
 }
 ;
+// var windowWth = window.innerWidth,
+// 	datepicker = querySelectorAll('.md-datepicker.nav-datepicker')[0];
+// console.log(datepicker);
+// datepicker.addEventListener('click', function(){
+// 	var calendar = document.getElementsByClassName('md-datepicker-calendar-pane')[0];
+// 	console.log(calendar);
+// 	function setAttr (top, left) {
+// 		calendar.setAttribute('top', top);
+// 		calendar.setAttribute('left', left);
+// 	} 
+// 	if (windowWth >= 1200) {
+// 		setAttr('21%', '13%');
+// 	}
+// 	else if (windowWth <= 959) {
+// 		if (windowWth <= 599) {
+// 			setAttr('17%', '6%');
+// 		}
+// 		else {
+// 			setAttr('21%', '9%');
+// 		}
+// 	};
+// }); 
