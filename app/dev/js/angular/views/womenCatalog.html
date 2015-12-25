@@ -5,12 +5,12 @@
       <div goods-filter="" class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-0">
           <form name="filters" method="post" class="hidden-sm hidden-xs">
-            <select name="womFash[]" ng-model="fashionSelect" ng-options="wFashion.value for wFashion in womenFashions" multiple="multiple" class="fashion-filter filter-select"></select>
-            <select name="womType[]" ng-model="TypeSelect" ng-options="wType.value for wType in womenTypes" multiple="multiple" class="type-filter filter-select"></select>
-            <select name="womColor[]" ng-model="ColorSelect" ng-options="fColor.value for fColor in colors" multiple="multiple" class="color-filter filter-select"></select>
-            <select name="womBrand[]" ng-model="BrandSelect" ng-options="brand.value for brand in brands" multiple="multiple" class="brand-filter filter-select"></select>
-            <select name="womSize[]" ng-model="SizeSelect" ng-options="size.value for size in sizes" multiple="multiple" class="size-filter filter-select"></select>
-            <select name="womPrice[]" ng-model="PriceSelect" ng-options="price.value for price in prices" multiple="multiple" class="price-filter filter-select"></select>
+            <select name="womFash[]" ng-model="fashionSelect" ng-options="wFashion.value for wFashion in womenFashions" multiple="multiple" class="fashion-filter sm-filter-menu"></select>
+            <select name="womType[]" ng-model="TypeSelect" ng-options="wType.value for wType in womenTypes" multiple="multiple" class="type-filter sm-filter-menu"></select>
+            <select name="womColor[]" ng-model="ColorSelect" ng-options="fColor.value for fColor in colors" multiple="multiple" class="color-filter sm-filter-menu"></select>
+            <select name="womBrand[]" ng-model="BrandSelect" ng-options="brand.value for brand in brands" multiple="multiple" class="brand-filter sm-filter-menu"></select>
+            <select name="womSize[]" ng-model="SizeSelect" ng-options="size.value for size in sizes" multiple="multiple" class="size-filter sm-filter-menu"></select>
+            <select name="womPrice[]" ng-model="PriceSelect" ng-options="price.value for price in prices" multiple="multiple" class="price-filter sm-filter-menu"></select>
           </form>
           <form method="" action="" class="visible-xs visible-sm">
             <div small-filter="" class="smf-bar">
@@ -42,8 +42,8 @@
                   <h5 class="smf-row-h">Fashion</h5>
                   <div class="smul-wrap">
                     <ul class="smf-fashion smf-ul">
-                      <li class="f-nSelectLi naughtS"><a href="#" data-filter-select="fashion" class="f-nSelect">Not selected,</a></li>
-                      <li ng-repeat="WF in womenFashions"><a href="#" data-filter-select="fashion" class="f-select">{{ WF.value }}</a></li>
+                      <li class="f-nSelectLi naughtS"><a href="#" data-filter-select="fashion" sm-filter-menu="" class="f-nSelect">Not selected,</a></li>
+                      <li ng-repeat="WF in womenFashions"><a href="#" data-filter-select="fashion" sm-filter-menu="" class="f-select">{{ WF.value }}</a></li>
                     </ul>
                   </div>
                 </div>
@@ -51,8 +51,8 @@
                   <h5 class="smf-row-h">Product type</h5>
                   <div class="smul-wrap">
                     <ul class="smf-type smf-ul">
-                      <li class="f-nSelectLi naughtS"><a href="#" data-filter-select="type" class="f-nSelect">Not selected,</a></li>
-                      <li ng-repeat="WT in womenTypes"><a href="#" data-filter-select="type" class="f-select">{{ WT.value }}</a></li>
+                      <li class="f-nSelectLi naughtS"><a href="#" data-filter-select="type" sm-filter-menu="" class="f-nSelect">Not selected,</a></li>
+                      <li ng-repeat="WT in womenTypes"><a href="#" data-filter-select="type" sm-filter-menu="" class="f-select">{{ WT.value }}</a></li>
                     </ul>
                   </div>
                 </div>
@@ -60,8 +60,8 @@
                   <h5 class="smf-row-h">Color</h5>
                   <div class="smul-wrap">
                     <ul class="smf-color smf-ul">
-                      <li class="f-nSelectLi naughtS"><a href="#" data-filter-select="color" class="f-nSelect">Not selected,</a></li>
-                      <li ng-repeat="clr in colors"><a href="#" data-filter-select="color" class="f-select">{{ clr.value }}</a></li>
+                      <li class="f-nSelectLi naughtS"><a href="#" data-filter-select="color" sm-filter-menu="" class="f-nSelect">Not selected,</a></li>
+                      <li ng-repeat="clr in colors"><a href="#" data-filter-select="color" sm-filter-menu="" class="f-select">{{ clr.value }}</a></li>
                     </ul>
                   </div>
                 </div>
@@ -69,8 +69,8 @@
                   <h5 class="smf-row-h">Brand</h5>
                   <div class="smul-wrap">
                     <ul class="smf-brand smf-ul">
-                      <li class="f-nSelectLi naughtS"><a href="#" data-filter-select="brand" class="f-nSelect">Not selected,</a></li>
-                      <li ng-repeat="brand in brands"><a href="#" data-filter-select="brand" class="f-select">{{ brand.value }}</a></li>
+                      <li class="f-nSelectLi naughtS"><a href="#" data-filter-select="brand" sm-filter-menu="" class="f-nSelect">Not selected,</a></li>
+                      <li ng-repeat="brand in brands"><a href="#" data-filter-select="brand" sm-filter-menu="" class="f-select">{{ brand.value }}</a></li>
                     </ul>
                   </div>
                 </div>
@@ -78,8 +78,8 @@
                   <h5 class="smf-row-h">Size</h5>
                   <div class="smul-wrap">
                     <ul class="smf-size smf-ul">
-                      <li class="f-nSelectLi naughtS"><a href="#" data-filter-select="size" class="f-nSelect">Not selected,</a></li>
-                      <li ng-repeat="size in sizes"><a href="#" data-filter-select="size" class="f-select">{{ size.value }}</a></li>
+                      <li class="f-nSelectLi naughtS"><a href="#" data-filter-select="size" sm-filter-menu="" class="f-nSelect">Not selected,</a></li>
+                      <li ng-repeat="size in sizes"><a href="#" data-filter-select="size" sm-filter-menu="" class="f-select">{{ size.value }}</a></li>
                     </ul>
                   </div>
                 </div>
@@ -87,8 +87,8 @@
                   <h5 class="smf-row-h">Price range</h5>
                   <div class="smul-wrap">
                     <ul class="smf-price smf-ul">
-                      <li class="f-nSelectLi naughtS"><a href="#" data-filter-select="price" class="f-nSelect">Not selected,</a></li>
-                      <li ng-repeat="price in prices"><a href="#" data-filter-select="price" class="f-select">{{ price.value }}</a></li>
+                      <li class="f-nSelectLi naughtS"><a href="#" data-filter-select="price" sm-filter-menu="" class="f-nSelect">Not selected,</a></li>
+                      <li ng-repeat="price in prices"><a href="#" data-filter-select="price" sm-filter-menu="" class="f-select">{{ price.value }}</a></li>
                     </ul>
                   </div>
                 </div>

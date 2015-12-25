@@ -4,12 +4,12 @@ div(ng-controller="catalogController")
 			.row(goods-filter="")
 				.col-xs-12.col-sm-12.col-md-12.col-lg-12.padding-0
 					form(name="filters" class='hidden-sm hidden-xs' method='post')
-						select(name="womFash[]" ng-model="fashionSelect" ng-options="wFashion.value for wFashion in womenFashions" class="fashion-filter filter-select" multiple)
-						select(name="womType[]" ng-model="TypeSelect" ng-options="wType.value for wType in womenTypes" class="type-filter filter-select" multiple)
-						select(name="womColor[]" ng-model="ColorSelect" ng-options="fColor.value for fColor in colors" class="color-filter filter-select" multiple)
-						select(name="womBrand[]" ng-model="BrandSelect" ng-options="brand.value for brand in brands" class="brand-filter filter-select" multiple)
-						select(name="womSize[]" ng-model="SizeSelect" ng-options="size.value for size in sizes" class="size-filter filter-select" multiple)
-						select(name="womPrice[]" ng-model="PriceSelect" ng-options="price.value for price in prices" class="price-filter filter-select" multiple)
+						select(name="womFash[]" ng-model="fashionSelect" ng-options="wFashion.value for wFashion in womenFashions" class="fashion-filter sm-filter-menu" multiple)
+						select(name="womType[]" ng-model="TypeSelect" ng-options="wType.value for wType in womenTypes" class="type-filter sm-filter-menu" multiple)
+						select(name="womColor[]" ng-model="ColorSelect" ng-options="fColor.value for fColor in colors" class="color-filter sm-filter-menu" multiple)
+						select(name="womBrand[]" ng-model="BrandSelect" ng-options="brand.value for brand in brands" class="brand-filter sm-filter-menu" multiple)
+						select(name="womSize[]" ng-model="SizeSelect" ng-options="size.value for size in sizes" class="size-filter sm-filter-menu" multiple)
+						select(name="womPrice[]" ng-model="PriceSelect" ng-options="price.value for price in prices" class="price-filter sm-filter-menu" multiple)
 					form(method="", action="").visible-xs.visible-sm
 						.smf-bar(small-filter="")
 							button(type="button" class="smf-btn btn btn-default")
@@ -41,60 +41,60 @@ div(ng-controller="catalogController")
 									.smul-wrap
 										ul.smf-fashion.smf-ul
 											li.f-nSelectLi.naughtS
-												a(href="#" class="f-nSelect" data-filter-select="fashion")
-													|Not selected,
+												a(href="#" class="f-nSelect" data-filter-select="fashion" sm-filter-menu="")
+														|Not selected,
 											li(ng-repeat='WF in womenFashions')
-												a(href="#" class="f-select" data-filter-select="fashion")
-													|{{ WF.value }}
+												a(href="#" class="f-select" data-filter-select="fashion" sm-filter-menu="")
+														|{{ WF.value }}
 								.filterSelct-row
 									h5.smf-row-h Product type
 									.smul-wrap
 										ul.smf-type.smf-ul
 											li.f-nSelectLi.naughtS
-												a(href="#" class="f-nSelect" data-filter-select="type")
+												a(href="#" class="f-nSelect" data-filter-select="type" sm-filter-menu="")
 													|Not selected,
 											li(ng-repeat='WT in womenTypes')
-												a(href="#" class="f-select" data-filter-select="type")
+												a(href="#" class="f-select" data-filter-select="type" sm-filter-menu="")
 													|{{ WT.value }}
 								.filterSelct-row
 									h5.smf-row-h Color
 									.smul-wrap
 										ul.smf-color.smf-ul
 											li.f-nSelectLi.naughtS
-												a(href="#" class="f-nSelect" data-filter-select="color")
+												a(href="#" class="f-nSelect" data-filter-select="color" sm-filter-menu="")
 													|Not selected,
 											li(ng-repeat='clr in colors')
-												a(href="#" class="f-select" data-filter-select="color")
+												a(href="#" class="f-select" data-filter-select="color" sm-filter-menu="")
 													|{{ clr.value }}
 								.filterSelct-row
 									h5.smf-row-h Brand
 									.smul-wrap
 										ul.smf-brand.smf-ul
 											li.f-nSelectLi.naughtS
-												a(href="#" class="f-nSelect" data-filter-select="brand")
+												a(href="#" class="f-nSelect" data-filter-select="brand" sm-filter-menu="")
 													|Not selected,
 											li(ng-repeat='brand in brands')
-												a(href="#" class="f-select" data-filter-select="brand")
+												a(href="#" class="f-select" data-filter-select="brand" sm-filter-menu="")
 													|{{ brand.value }}
 								.filterSelct-row
 									h5.smf-row-h Size
 									.smul-wrap
 										ul.smf-size.smf-ul
 											li.f-nSelectLi.naughtS
-												a(href="#" class="f-nSelect" data-filter-select="size")
+												a(href="#" class="f-nSelect" data-filter-select="size" sm-filter-menu="")
 													|Not selected,
 											li(ng-repeat='size in sizes')
-												a(href="#" class="f-select" data-filter-select="size")
+												a(href="#" class="f-select" data-filter-select="size" sm-filter-menu="")
 													|{{ size.value }}
 								.filterSelct-row
 									h5.smf-row-h Price range
 									.smul-wrap
 										ul.smf-price.smf-ul
 											li.f-nSelectLi.naughtS
-												a(href="#" class="f-nSelect" data-filter-select="price")
+												a(href="#" class="f-nSelect" data-filter-select="price" sm-filter-menu="")
 													|Not selected,
 											li(ng-repeat='price in prices')
-												a(href="#" class="f-select" data-filter-select="price")
+												a(href="#" class="f-select" data-filter-select="price" sm-filter-menu="")
 													|{{ price.value }}
 	.container.margin-bottom-15
 		.row

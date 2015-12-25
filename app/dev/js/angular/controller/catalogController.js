@@ -140,4 +140,5 @@ app.controller('catalogController', ['$scope', function($scope) {
 			name: 'Straight Leg Jeans',
 			cost: 12.75
 	}];
+	$scope.filterValue = {};
 }]);

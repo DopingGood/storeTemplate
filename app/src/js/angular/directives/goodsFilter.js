@@ -19,7 +19,7 @@ app.directive('goodsFilter', function(){
 				selects('.price-filter', 'Price Range');
 
 				var prevDef = function(e) {
-				e.preventDefault();
+					e.preventDefault();
 				};
 				//		Events that customize buttons
 				var filterValue = {}; //объект с датой фильтра
